@@ -1,77 +1,76 @@
 # fukui-kanko-coupon
 
-## アプリ
+## Features
 
-- [1kmメッシュ毎の利用金額マップ](https://code4fukui.github.io/fukui-kanko-coupon/)
+- [1km mesh map of usage amount](https://code4fukui.github.io/fukui-kanko-coupon/)
 
-## オープンデータ
+## Open Data
 
-- CC BY [利用者一覧（ユーザID,都道府県,性別,利用回数,利用金額,年代）](users.csv) ([利用金額順](users_amount.csv)、[利用回数順](users_count.csv))
-- CC BY [利用一覧（取引日時,ユーザID,取引種別,金額,取消フラグ,カテゴリー,カテゴリー2,Geo3x3）](mesh-tr.csv)
-- CC BY [メッシュ毎利用金額（Geo3x3,カテゴリー,利用金額）](mesh-tr-total.csv)
-- CC0 [メッシュGeoJSON](mesh-geo3x3.geojson)
+- CC BY [List of users (User ID, Prefecture, Gender, Usage Count, Usage Amount, Age)](users.csv) ([by usage amount](users_amount.csv), [by usage count](users_count.csv))
+- CC BY [List of usage (Transaction Datetime, User ID, Transaction Type, Amount, Cancel Flag, Category, Category2, Geo3x3)](mesh-tr.csv)
+- CC BY [Usage amount per mesh (Geo3x3, Category, Usage Amount)](mesh-tr-total.csv)
+- CC0 [Mesh GeoJSON](mesh-geo3x3.geojson)
 
-## ふくいdeお得クーポン
+## Fukui de Otoku Coupon
 
-- [ふくいdeお得クーポンキャンペーン](https://fukui-de-coupon.jp/)
-- [「ふくいｄｅお得キャンペーン」を１月１０日から再開します！](https://www2.pref.fukui.lg.jp/press/view.php?cod=d76b8D167287688524&whence=72)
+- [Fukui de Otoku Coupon Campaign](https://fukui-de-coupon.jp/)
+- ["Fukui de Otoku Campaign" will be resumed from January 10th!](https://www2.pref.fukui.lg.jp/press/view.php?cod=d76b8D167287688524&whence=72)
 
-本事業は、新型コロナウイルス感染症の拡大により落ち込んだ旅行需要の回復を図り、深刻な影響を受けた県内観光事業者を支援することを目的としたキャンペーンです。
+This project aims to revive the dwindling travel demand caused by the COVID-19 pandemic and support the severely affected tourism businesses in Fukui Prefecture.
 
-### 実施期間
+### Implementation Period
 
-令和5年1月10日（火）～令和5年７月２０日（木）宿泊・催行分まで  
-（令和５年４月２９日（土）～５月７日（日）宿泊・催行分を除く）  
+January 10, 2023 (Tue) to July 20, 2023 (Thu) for accommodation and activities
+(Excluding April 29 (Sat) to May 7 (Sun), 2023)
 
-### 利用対象者
+### Target Users
 
-日本国内に居住する旅行者
+Travelers residing in Japan
 
-### 利用条件
+### Conditions for Use
 
-「本人確認書類」（原本）の提示
+Presentation of "personal identification document" (original)
 
-### 実施内容
+### Implementation Content
 
-以下条件による宿泊旅行に対し、福井県内の土産物店や飲食店、タクシーなどで使える2,000円または1,000円分のクーポンを進呈。
+Provide coupons worth 2,000 yen or 1,000 yen that can be used at souvenir shops, restaurants, taxis, etc. within Fukui Prefecture, depending on the conditions for the accommodation travel.
 
-### 配布条件
+### Distribution Conditions
 
-令和５年１月１０日（火）から３月３１日（金）宿泊・催行分まで
-- 対象者：全国４７都道府県にお住まいの方
-- 地域クーポン券：平日２，０００円・休日１，０００円
+Until March 31, 2023 for accommodation and activities:
+- Target: Residents of all 47 prefectures in Japan
+- Regional Coupon: 2,000 yen on weekdays, 1,000 yen on weekends
 
-令和５年４月１日（土）～７月２０日（木）宿泊・催行分まで  
-（令和５年４月２９日（土）～５月７日（日）宿泊・催行分を除く）  
-- 地域クーポン券　平日２，０００円・休日１，０００円
-- 県独自の上乗せ事業
-    - 嶺北嶺南交流宿泊（宿泊代金１０，０００円以上/人泊）に地域クーポン１，０００円/人泊を配布（福井県民限定）
-    - 平日県内宿泊（７０歳以上かつ宿泊代金１０，０００円以上/人泊）に地域クーポン１，０００円/人泊を配布
-    - 家族・グループでの県内宿泊（２名以上かつ宿泊代金１０，０００円以上/人泊）に交通クーポン２，０００円/グループ泊を配布
-    - 県内旅行会社で県外への交通付宿泊旅行を申し込む県民グループ（２名以上）に交通クーポン２，０００円/グループ泊を配布
-※最低宿泊料金3,000円以上が対象  
-※休日：宿泊日とその翌日が休日（土曜・日曜・祝日）の場合の宿泊日  
+From April 1 to July 20, 2023 for accommodation and activities 
+(Excluding April 29 (Sat) to May 7 (Sun), 2023):
+- Regional Coupon: 2,000 yen on weekdays, 1,000 yen on weekends
+- Fukui Prefecture's own additional project:
+    - 1,000 yen/person-night for inter-regional (Hokuriku-Echizen) accommodation (10,000 yen or more/person-night) (Fukui residents only)
+    - 1,000 yen/person-night for weekday accommodation in Fukui (70 years old or older and 10,000 yen or more/person-night)
+    - 2,000 yen/group-night for family/group accommodation in Fukui (2 or more people and 10,000 yen or more/person-night)
+    - 2,000 yen/group-night for Fukui residents who book accommodation with transportation outside the prefecture through a Fukui travel agency (2 or more people)
+* Minimum accommodation fee of 3,000 yen is required
+* Weekends: Accommodation day and the following day are weekends (Saturday, Sunday, Holiday)
 
-### 利用期間
+### Usage Period
 
-オリジナルクーポンの有効期限は最長３週間程度で、2023年8月5日(土)まで
+The validity period of the original coupon is about 3 weeks at most, until August 5, 2023 (Sat).
 
-### 利用要件
+### Usage Requirements
 
-利用泊数の制限
-- 1回の予約または申込につき7泊分まで
+Limit on number of nights
+- Up to 7 nights per reservation or application
 
-利用回数の制限
-- なし
+No limit on number of uses
 
-### クーポン利用可能施設
+### Facilities where Coupons can be used
 
-福井県内のふくいdeお得クーポン取扱店舗として登録されている店舗
+Stores registered as "Fukui de Otoku Coupon" participating stores within Fukui Prefecture
 
-## 出典
+## Source
 
-- ふくいdeお得クーポン取扱店一覧 by <a href=https://www.fukui-digital.co.jp/>株式会社ふくいのデジタル</a> → <a href=https://www.fuku-e.com/feature/detail_266.html>FTAS</a>・<a href=https://code4fukui.github.io/>Code for FUKUI</a>で加工して提供
+- List of "Fukui de Otoku Coupon" participating stores by <a href=https://www.fukui-digital.co.jp/>Fukui Digital Co., Ltd.</a> → Provided by <a href=https://www.fuku-e.com/feature/detail_266.html>FTAS</a> and <a href=https://code4fukui.github.io/>Code for FUKUI</a>
 
-## 関連
+## Related
 
-- [福井県観光アンケート（福井県観光連盟）](https://code4fukui.github.io/fukui-kanko-stat/)
+- [Fukui Prefecture Tourism Survey (Fukui Tourism Federation)](https://code4fukui.github.io/fukui-kanko-stat/)
