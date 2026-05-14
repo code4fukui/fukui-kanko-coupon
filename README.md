@@ -1,77 +1,55 @@
 # fukui-kanko-coupon
 
-## アプリ
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
 
-- [1kmメッシュ毎の利用金額マップ](https://code4fukui.github.io/fukui-kanko-coupon/)
+This project visualizes usage data from the "Fukui de Otoku Coupon," a campaign by Fukui Prefecture, Japan, to support local tourism businesses affected by the COVID-19 pandemic.
 
-## オープンデータ
+## Demo
 
-- CC BY [利用者一覧（ユーザID,都道府県,性別,利用回数,利用金額,年代）](users.csv) ([利用金額順](users_amount.csv)、[利用回数順](users_count.csv))
-- CC BY [利用一覧（取引日時,ユーザID,取引種別,金額,取消フラグ,カテゴリー,カテゴリー2,Geo3x3）](mesh-tr.csv)
-- CC BY [メッシュ毎利用金額（Geo3x3,カテゴリー,利用金額）](mesh-tr-total.csv)
-- CC0 [メッシュGeoJSON](mesh-geo3x3.geojson)
+[**Interactive 1km Mesh Map of Coupon Usage**](https://code4fukui.github.io/fukui-kanko-coupon/)
 
-## ふくいdeお得クーポン
+The demo visualizes coupon spending data on an interactive map. Users can filter the data by date range, user prefecture, age, gender, and business category.
 
-- [ふくいdeお得クーポンキャンペーン](https://fukui-de-coupon.jp/)
-- [「ふくいｄｅお得キャンペーン」を１月１０日から再開します！](https://www2.pref.fukui.lg.jp/press/view.php?cod=d76b8D167287688524&whence=72)
+## Features
 
-本事業は、新型コロナウイルス感染症の拡大により落ち込んだ旅行需要の回復を図り、深刻な影響を受けた県内観光事業者を支援することを目的としたキャンペーンです。
+- **Interactive Map:** Visualizes coupon spending amounts across Fukui Prefecture on a zoomable map.
+- **Geospatial Aggregation:** Data is aggregated into 1km² geographical meshes (Geo3x3) to show spending hotspots.
+- **Dynamic Filtering:** Allows filtering of transaction data by:
+    - Date Range (from 2023-01-10 to 2023-08-05)
+    - User's Home Prefecture
+    - User's Age Group
+    - User's Gender
+    - Business Category
 
-### 実施期間
+## Open Data
 
-令和5年1月10日（火）～令和5年７月２０日（木）宿泊・催行分まで  
-（令和５年４月２９日（土）～５月７日（日）宿泊・催行分を除く）  
+This project provides the following open datasets for analysis and reuse.
 
-### 利用対象者
+- **User Data (CC BY)**
+    - [`users.csv`](users.csv): List of users (User ID, Prefecture, Gender, Usage Count, Usage Amount, Age).
+    - [`users_amount.csv`](users_amount.csv): Users sorted by total usage amount.
+    - [`users_count.csv`](users_count.csv): Users sorted by total usage count.
 
-日本国内に居住する旅行者
+- **Transaction Data (CC BY)**
+    - [`mesh-tr.csv`](mesh-tr.csv): List of all transactions (Transaction Datetime, User ID, Transaction Type, Amount, Cancel Flag, Category, Category2, Geo3x3).
+    - [`mesh-tr-total.csv`](mesh-tr-total.csv): Aggregated usage amount per mesh (Geo3x3, Category, Usage Amount).
 
-### 利用条件
+- **Geospatial Data (CC0)**
+    - [`mesh-geo3x3.geojson`](mesh-geo3x3.geojson): GeoJSON file defining the 1km mesh grid used for visualization.
 
-「本人確認書類」（原本）の提示
+## About the "Fukui de Otoku Coupon"
 
-### 実施内容
+- [Fukui de Otoku Coupon Campaign (Official Site)](https://fukui-de-coupon.jp/)
+- [Campaign Relaunch Announcement (Fukui Prefectural Government)](https://www2.pref.fukui.lg.jp/press/view.php?cod=d76b8D167287688524&whence=72)
 
-以下条件による宿泊旅行に対し、福井県内の土産物店や飲食店、タクシーなどで使える2,000円または1,000円分のクーポンを進呈。
+## Data Source
 
-### 配布条件
+The underlying data on participating stores was provided by the <a href=https://www.ftu-fukui.or.jp/>Fukui Tourism Federation</a> and <a href=https://code4fukui.github.io/>Code for FUKUI</a>, based on a list from <a href=https://www.fukui-digital.co.jp/>Fukui Digital Co., Ltd.</a>
 
-令和５年１月１０日（火）から３月３１日（金）宿泊・催行分まで
-- 対象者：全国４７都道府県にお住まいの方
-- 地域クーポン券：平日２，０００円・休日１，０００円
+## Related Projects
 
-令和５年４月１日（土）～７月２０日（木）宿泊・催行分まで  
-（令和５年４月２９日（土）～５月７日（日）宿泊・催行分を除く）  
-- 地域クーポン券　平日２，０００円・休日１，０００円
-- 県独自の上乗せ事業
-    - 嶺北嶺南交流宿泊（宿泊代金１０，０００円以上/人泊）に地域クーポン１，０００円/人泊を配布（福井県民限定）
-    - 平日県内宿泊（７０歳以上かつ宿泊代金１０，０００円以上/人泊）に地域クーポン１，０００円/人泊を配布
-    - 家族・グループでの県内宿泊（２名以上かつ宿泊代金１０，０００円以上/人泊）に交通クーポン２，０００円/グループ泊を配布
-    - 県内旅行会社で県外への交通付宿泊旅行を申し込む県民グループ（２名以上）に交通クーポン２，０００円/グループ泊を配布
-※最低宿泊料金3,000円以上が対象  
-※休日：宿泊日とその翌日が休日（土曜・日曜・祝日）の場合の宿泊日  
+- [Fukui Prefecture Tourism Survey (Fukui Tourism Federation)](https://code4fukui.github.io/fukui-kanko-stat/)
 
-### 利用期間
+## License
 
-オリジナルクーポンの有効期限は最長３週間程度で、2023年8月5日(土)まで
-
-### 利用要件
-
-利用泊数の制限
-- 1回の予約または申込につき7泊分まで
-
-利用回数の制限
-- なし
-
-### クーポン利用可能施設
-
-福井県内のふくいdeお得クーポン取扱店舗として登録されている店舗
-
-## 出典
-
-- ふくいdeお得クーポン取扱店一覧 by <a href=https://www.fukui-digital.co.jp/>株式会社ふくいのデジタル</a> → <a href=https://www.fuku-e.com/feature/detail_266.html>FTAS</a>・<a href=https://code4fukui.github.io/>Code for FUKUI</a>で加工して提供
-
-## 関連
-
-- [福井県観光アンケート（福井県観光連盟）](https://code4fukui.github.io/fukui-kanko-stat/)
+MIT License — see [LICENSE](LICENSE).
